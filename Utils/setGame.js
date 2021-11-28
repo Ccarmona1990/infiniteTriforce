@@ -6,7 +6,6 @@ const setGame = ()=>{
     arr.map((game)=>{
         game.addEventListener('click',(e)=>{
             const id = e.currentTarget.dataset.id;
-            console.log(id);
             localStorage.setItem('game', id);
         })
     })

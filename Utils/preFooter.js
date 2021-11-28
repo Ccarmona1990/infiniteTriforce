@@ -31,7 +31,7 @@ export function newsletterForm() {
   const nlEmail = get('#newsLetterEmail');
   const nlForm = get('.newsletterForm');
   
-  nlForm.addEventListener('submit', ()=>{
+  nlForm.addEventListener('submit', setTimeout(()=>{
     nlEmail.value = ''
-  })
+  },100))
 }
