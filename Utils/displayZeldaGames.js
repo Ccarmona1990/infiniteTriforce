@@ -8,7 +8,7 @@ function displayZeldaGames(arr) {
   let displayGames = arr.map(({id, name, image})=>{
     return `
   <a data-id='${id}' class="zelda_game" 
-  href="/js/js projects/Zelda's games/SingleGame.html">
+  href="./SingleGame.html">
   <h2 >${name} </h2>
             
   <img class="gameImg" 
