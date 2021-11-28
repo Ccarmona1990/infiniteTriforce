@@ -63,23 +63,6 @@ export function navBar() {
           </div>              
               </div>
               `;
-  const navf = `
-   <!-- nav-footer -->
-   
-   <!-- Links and search bar -->
-        <div class="nav-footer">
-        
-        <!-- Search Bar -->
-          <div id="searchbar">
-          <input type="text" name="" placeholder="search.." id="searchBox" />
-          <button type="submit" id="searchIcon" onclick="alert('hello')">
-          <i class="fas fa-search"></i>
-            </button>
-            </div>
-        </div>
-        
-        <!-- End of nav-footer -->
-        `;
-  //nav.innerHTML = navh;
+  nav.innerHTML = navh;
   
 }
