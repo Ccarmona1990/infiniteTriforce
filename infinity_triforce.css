@@ -1,0 +1,870 @@
+/*
+================
+Global
+================
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* colors */
+
+  /*Mycolors*/
+  --mainPurple: purple;
+  --lightergray: rgba(231, 230, 230, 0.651);
+  --lightgray: rgba(185, 178, 178, 0.507);
+  --purpleBoxShadow: 3px 5px 3px 0px rgba(108, 48, 183, 0.75);
+  --wholepurpleBoxShadow: -2px 3px 10px 7px rgba(108, 48, 183, 0.28);
+
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: #49a6e9;
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  /* Other Primary colors*/
+  --primary-100: #e2e0ff;
+  --primary-200: #c1beff;
+  --primary-300: #a29dff;
+  --primary-400: #837dff;
+  --primary-500: #645cff;
+  --primary-600: #504acc;
+  --primary-700: #3c3799;
+  --primary-800: #282566;
+  --primary-900: #141233;
+  /* grey */
+  --grey-50: #f8fafc;
+  --grey-100: #f1f5f9;
+  --grey-200: #e2e8f0;
+  --grey-300: #cbd5e1;
+  --grey-400: #94a3b8;
+  --grey-500: #64748b;
+  --grey-600: #475569;
+  --grey-700: #334155;
+  --grey-800: #1e293b;
+  --grey-900: #0f172a;
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --clr-gold: #c59d5f;
+  /* rest of the colors */
+  --black: #222;
+  --white: #fff;
+  --red-light: #f8d7da;
+  --red-dark: #842029;
+  --green-light: #d1e7dd;
+  --green-dark: #0f5132;
+
+  /* fonts  */
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --ff-third: "Nunito", sans-serif;
+  --smallText: 0.7em;
+
+  /* box shadow*/
+  --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --darker-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5);
+  --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+  /*General global variables*/
+  --scaleMin: scale(1.005);
+  --scaleMid: scale(1.05);
+  --scaleHi: scale(1.5);
+  --transition: 0.3s ease-in-out all;
+  --borderRadious: 0.25rem;
+  --max-width: 1120px;
+  --fixed-width: 600px;
+  /* rest of the vars */
+  --backgroundColor: var(--grey-50);
+  --textColor: var(--grey-900);
+  --borderRadius: 0.25rem;
+  --letterSpacing: 1px;
+  --max-width: 1120px;
+  --fixed-width: 620px;
+  --transition1: all 0.3s linear;
+  --transition2: 0.3s ease-in-out all;
+  --spacing: 0.25rem;
+}
+
+a:link,
+a:hover,
+a:visited {
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+/*
+================
+My Hero
+================
+*/
+
+/*
+================
+Navbar
+================
+*/
+
+.headerHero {
+  height: 100vh;
+  background: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 0.5458333846233806) 0%,
+      rgba(0, 0, 0, 0.05) 100%
+    ),
+    url("./Images/zelda's_team_pic.jpg");
+  background-size: cover;
+}
+
+#navbar {
+  margin: 0 5vw;
+}
+
+/* nav-header */
+
+#nav-header {
+  display: grid;
+  grid-template-columns: 15% auto;
+  align-items: center;
+  gap: 35px;
+}
+
+#nav-header a i.fab.fa-3x {
+  width: 2px;
+}
+
+#nav-header a i.fab {
+  color: aqua;
+  transition: var(--transition);
+}
+
+#nav-header a i.fab:hover {
+  color: black;
+  transform: var(--scaleMid);
+  transition: var(--transition);
+}
+
+.navHeaderSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*nav-footer*/
+
+.nav-footer {
+  display: flex;
+  justify-content: flex-end;
+  border-radius: var(--borderRadious);
+  border: 5px 0 solid white;
+  transition: var(--transition);
+}
+
+#searchbar {
+  box-shadow: 3px 5px 3px 0px rgba(108, 48, 183, 0.75);
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+
+#searchBox,
+#searchIcon {
+  padding: 0px;
+  margin-left: -1px;
+  width: auto;
+  height: 45px;
+  display: block;
+}
+
+#searchBox {
+  margin-right: -4px;
+}
+
+#searchIcon {
+  padding: 10px;
+}
+
+#logo {
+  width: 100px;
+}
+
+.nav-link {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  padding: 1rem 1rem;
+  margin: 0px 1vw;
+  text-transform: capitalize;
+  border-radius: var(--borderRadious);
+  box-shadow: 3px 5px 5px 0px rgba(108, 48, 183, 0.75);
+  display: inline-block;
+}
+
+#nav-links a:hover {
+  color: aqua;
+  transform: var(--scaleMid);
+  transition: var(--transition);
+}
+
+#togglebtn {
+  transition: var(--transition);
+  display: none;
+}
+
+.sideBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    354deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(100, 58, 231, 1) 40%,
+    rgba(137, 100, 255, 1) 67%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  border-radius: var(--borderRadious);
+  border: 2px solid --lightgray;
+  box-shadow: var(--purpleBoxShadow);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 2rem;
+  box-shadow: var(--light-shadow);
+  transition: var(--transition);
+  transform: translate(-110%);
+  z-index: 1;
+}
+
+/*
+================
+main
+================
+*/
+
+main {
+  padding: 2vh auto;
+  min-height: calc(100vh - (64px + 83px));
+  overflow: auto;
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.welcomeSection {
+  margin-bottom: 5rem;
+  width: auto;
+  color: white;
+  background-size: cover;
+  align-items: center;
+  place-items: center;
+  text-align: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+.welcomeHeader {
+  margin-top: 10vw;
+}
+
+.welcomeText {
+  margin: 0 15vw;
+}
+
+article {
+  margin: 1vh 2vw;
+  margin-bottom: 5rem;
+  max-width: 89vw;
+}
+
+.underline {
+  height: 0.25rem;
+  width: 7rem;
+  background: var(--clr-primary-2);
+  margin: 0 auto;
+}
+
+.articleHeader {
+  color: black;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 3rem;
+}
+
+.searchSection {
+  display: flex;
+  justify-content: right;
+}
+
+/* Zelda Games class*/
+.zelda_games {
+  display: grid;
+  gap: 2vw;
+  grid-template-columns: auto auto auto;
+  box-sizing: border-box;
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center;
+}
+
+.zelda_games a {
+  display: block;
+}
+
+.zelda_games img {
+  margin: 25px;
+  max-width: 23vw;
+  max-height: 30vh;
+}
+
+/* Zelda Game class */
+
+.zelda_game {
+  color: white;
+  border: 3px solid var(--lightergray);
+  box-sizing: border-box;
+  border-radius: var(--borderRadious);
+  box-shadow: var(--purpleBoxShadow);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.zelda_game:link,
+.zelda_game:visited {
+  color: black;
+}
+
+.zelda_game:hover {
+  background-color: var(--grey-100);
+  color: black;
+  border: 3px solid var(--lightgray);
+  box-shadow: var(--purpleBoxShadow);
+  transform: var(--scaleMid);
+  transition: var(--transition);
+  display: inline;
+}
+
+.b-Top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  color: var(--clr-primary-5);
+  transition: all 0.3s linear;
+}
+
+.b-Top:hover {
+  transform: scale(1.2);
+}
+
+.hide {
+  display: none;
+}
+/*
+================
+Pre-footer
+================
+*/
+
+.pre-footer {
+  display: flex;
+  justify-content: right;
+}
+
+aside a i.fab.fa-3x {
+  width: 2px;
+}
+
+aside a i.fab {
+  color: black;
+  background-color: aqua;
+  padding: 5px;
+  border-radius: var(--borderRadious);
+  transition: var(--transition);
+  border: 2px solid var(--grey-400);
+}
+
+aside a i.fab:hover {
+  color: white;
+  background-color: black;
+  border: 2px solid purple;
+  border-radius: var(--borderRadious);
+  transform: var(--scaleMid);
+  transition: var(--transition);
+}
+
+.aside-link {
+  background-color: white;
+  padding: 0.3rem 0.3rem;
+  margin: 0px 1vw;
+  text-transform: capitalize;
+  border-radius: var(--borderRadious);
+  display: inline-block;
+}
+
+.aside-link:hover {
+  color: white;
+  background-color: black;
+  border-radius: var(--borderRadious);
+  transform: var(--scaleMid);
+  transition: var(--transition);
+}
+
+.newsLetter {
+  border-color: white;
+  border-radius: 0.25rem;
+  height: 3rem;
+}
+.aside-btn {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.newsletter {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.newsLetterSection {
+  width: 18rem;
+  display: flexbox;
+  padding: 1rem 1.2rem;
+  border-radius: 0.5rem;
+  background-color: var(--primary-600);
+}
+
+/*
+================
+footer
+================
+*/
+footer {
+  height: 4rem;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* text-align: center; */
+  overflow: hidden;
+}
+
+.footer-logo,
+footer a {
+  color: var(--clr-grey-8);
+}
+
+/*
+================
+Each Zelda game 
+================
+*/
+
+.singleGame {
+  margin-top: 3rem;
+  background-color: var(--clr-primary-4);
+  border-radius: 0.5rem;
+  padding: 10px;
+  box-shadow: var(--darker-shadow);
+}
+
+.singleGameInfo {
+  display: grid;
+  grid-template-columns: 50% auto;
+  gap: 3vw;
+  margin-bottom: 20px;
+}
+
+.singleGameInfo img {
+  max-width: 45vw;
+  max-height: auto;
+  margin: 0;
+  display: inline-block;
+  border-radius: var(--borderRadious);
+}
+
+.description {
+  padding-top: 4rem;
+}
+
+.descriptionText {
+  text-align: left;
+}
+
+.divider {
+  background-color: #cbd5e1;
+  height: 2px;
+}
+
+.extra {
+  padding: 0 10px;
+  margin: 2rem 0;
+}
+
+.extra ul li {
+  list-style: square;
+  text-transform: capitalize;
+}
+
+.extra ul li a {
+  color: black;
+  transition: var(--transition);
+}
+
+.extra ul li a:hover {
+  color: white;
+  transform: var(--scaleMin);
+}
+
+/*
+================
+Contact 
+================
+*/
+form {
+  text-align: left;
+}
+
+.ContactDescription {
+  display: grid;
+  grid-template-columns: 50% 40%;
+  gap: 3vw;
+  margin-top: 5vh;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.ContactDescription h1 {
+  text-transform: capitalize;
+  font-size: 3rem;
+}
+
+.contactForm {
+  padding: 2rem 2.5rem;
+  background-color: #f8fafc;
+  box-shadow: var(--wholepurpleBoxShadow);
+  border-radius: var(--borderRadious);
+  display: grid;
+  grid-template-columns: auto;
+  gap: 1rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+form input {
+  width: 100%;
+  height: 1.5rem;
+  border-radius: var(--borderRadious);
+  border: 1px solid #e2e8f0;
+}
+
+form textarea {
+  width: 100%;
+  border-radius: var(--borderRadious);
+  border: 1px solid #e2e8f0;
+}
+
+#btnContact {
+  width: 100%;
+  height: 2rem;
+  border-radius: var(--borderRadious);
+  border: 1px solid #e2e8f0;
+  background-color: var(--mainPurple);
+  color: white;
+  cursor: pointer;
+}
+
+#btnContact:hover {
+  background-color: rgb(99, 0, 99);
+}
+
+/*
+=============
+About
+=============
+*/
+
+.aboutImg {
+  width: 38vw;
+}
+
+.aboutContact {
+  display: block;
+  color: white;
+  width: 5.5rem;
+  padding: 0.3rem 1rem;
+  margin: 25px 0;
+  background-color: var(--mainPurple);
+  border: 2px solid --lightergray;
+  border-radius: var(--borderRadious);
+  text-transform: capitalize;
+  font-size: 17px;
+}
+
+.aboutContact:hover {
+  background-color: rgb(85, 2, 85);
+}
+
+.ContactDescriptionText {
+  margin-bottom: 25px;
+}
+
+/*
+=============
+Media query
+=============
+*/
+
+@media (max-width: 1195px) {
+  #navbar {
+    margin: 0 5vw;
+  }
+  #nav-header {
+    display: grid;
+    grid-template-columns: 10% auto 5%;
+    align-items: center;
+  }
+
+  .nav-footer {
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+    border-radius: var(--borderRadious);
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+  }
+
+  #nav-links {
+    display: none;
+  }
+
+  .sideBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      354deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(100, 58, 231, 1) 40%,
+      rgba(137, 100, 255, 1) 67%,
+      rgba(255, 255, 255, 1) 100%
+    );
+    border-radius: var(--borderRadious);
+    border: 2px solid --lightgray;
+    box-shadow: var(--purpleBoxShadow);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 2rem;
+    box-shadow: var(--light-shadow);
+    transition: var(--transition);
+    transform: translate(-110%);
+    z-index: 1;
+  }
+
+  .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .sideBar-Links {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .show-sideBar {
+    transform: translate(0);
+  }
+
+  .nav-link {
+    display: block;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 1rem 1rem;
+    border-top: 1px solid rgba(212, 212, 212, 0.829);
+    transition: var(--transition);
+    margin: 1vh;
+  }
+
+  .nav-link:hover {
+    color: aqua;
+    transform: var(--scaleMid);
+    transition: var(--transition);
+  }
+
+  #searchBar {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+  }
+
+  #togglebtn {
+    display: block;
+    display: initial;
+  }
+
+  #togglebtn:hover {
+    transform: scale(1.3);
+  }
+
+  .closeBtn {
+    transition: var(--transition);
+    color: var(--mainPurple);
+    width: 25px;
+    background-color: #00000000;
+    border: 0px #00000000;
+    margin-right: 20px;
+  }
+
+  .closeBtn:hover {
+    transform: rotate(540deg);
+    transition: var(--transition);
+  }
+
+  .sideBar-Links a {
+    width: 270px;
+    display: block;
+    margin-left: 0.8rem;
+  }
+
+  .sideBarIcons {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .nav-btn,
+  .nav-btn i {
+    padding: 0 5px;
+    transition: var(--transition);
+    color: black;
+    width: 25px;
+    background-color: #00000000;
+    border: 0px #00000000;
+  }
+
+  main {
+    margin: 0;
+    min-height: calc(100vh - (64px + 91px));
+  }
+
+  .zelda_games {
+    display: grid;
+    gap: 2vw;
+    grid-template-columns: auto auto;
+    box-sizing: border-box;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    transition: var(--transition);
+  }
+
+  .zelda_games img {
+    margin: 25px;
+    max-width: 35vw;
+    max-height: 30vh;
+  }
+
+  .singleGameInfo {
+    margin: 15vh 3vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 3vw;
+  }
+
+  .singleGameInfo img {
+    max-width: 85vw;
+    max-height: 75vh;
+    margin: 0;
+    display: inline-block;
+    border-radius: var(--borderRadious);
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .ContactDescription {
+    display: grid;
+    grid-template-columns: 90%;
+    gap: 3vw;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .zelda_games {
+    display: grid;
+    gap: 2vw;
+    grid-template-columns: auto;
+    box-sizing: border-box;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    transition: var(--transition);
+  }
+
+  .zelda_games img {
+    margin: 25px;
+    max-width: 60vw;
+    max-height: 40vh;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
