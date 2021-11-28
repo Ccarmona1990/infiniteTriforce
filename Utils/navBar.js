@@ -13,12 +13,11 @@ export function navBar() {
   
   <div>
           
-  <a href="/js/js projects/Zelda's games/Index.html">
-  <img id="logo" src="/js/js projects/Zelda's games/Images/Component 1.png" alt="logo" />
+  <a href="./Index.html">
+  <img id="logo" src="./Images/Component 1.png" alt="logo" />
             </a>
             
           </div>
-          
           
           <!-- nav-header section -->
           
@@ -28,11 +27,11 @@ export function navBar() {
           
           <div id="nav-links">
           
-          <a href="/js/js projects/Zelda's games/Index.html" class="nav-link">home</a>
+          <a href="./Index.html" class="nav-link">home</a>
           
-          <a href="/js/js projects/Zelda's games/About_page.html" class="nav-link">about</a>
+          <a href="./About_page.html" class="nav-link">about</a>
           
-          <a href="/js/js projects/Zelda's games/Contact_page.html" class="nav-link">contact</a>
+          <a href="./Contact_page.html" class="nav-link">contact</a>
           
           </div>
           
@@ -61,13 +60,7 @@ export function navBar() {
           <i class="fas fa-align-justify fa-2x"></i>
           </button>
           </div>
-              
-          <!-- End of nav-header section -->
-              
-          </div>
-              
-              <!-- End of nav-header -->
-              
+          </div>              
               </div>
               `;
   const navf = `
@@ -87,6 +80,6 @@ export function navBar() {
         
         <!-- End of nav-footer -->
         `;
-  nav.innerHTML = navh;
+  //nav.innerHTML = navh;
   
 }
