@@ -10,7 +10,7 @@ export function main(){
   <section class='searchSection'>
   <div id="searchbar">
           <input type="text" name="" placeholder="search.." id="searchBox" />
-          <button type="submit" id="searchIcon" onclick="alert('hello')">
+          <button type="button" id="searchIcon">
           <i class="fas fa-search"></i>
             </button>
             </div>
