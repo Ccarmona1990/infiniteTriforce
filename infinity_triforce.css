@@ -169,7 +169,7 @@ Navbar
 }
 
 #nav-header a i.fab {
-  color: aqua;
+  color: var(--clr-primary-7);
   transition: var(--transition);
 }
 
@@ -377,7 +377,7 @@ article {
 }
 
 .zelda_game:hover {
-  background-color: var(--grey-100);
+  background-color: var(--clr-primary-5);
   color: black;
   border: 3px solid var(--lightgray);
   box-shadow: var(--purpleBoxShadow);
@@ -418,7 +418,7 @@ aside a i.fab.fa-3x {
 
 aside a i.fab {
   color: black;
-  background-color: aqua;
+  background-color: var(--clr-primary-4);
   padding: 5px;
   border-radius: var(--borderRadious);
   transition: var(--transition);
@@ -503,7 +503,7 @@ Each Zelda game
 
 .singleGame {
   margin-top: 3rem;
-  background-color: var(--clr-primary-4);
+  background-color: var(--clr-primary-5);
   border-radius: 0.5rem;
   padding: 10px;
   box-shadow: var(--darker-shadow);
