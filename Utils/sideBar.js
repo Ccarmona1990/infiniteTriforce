@@ -25,11 +25,11 @@ export function sideBar() {
       </div>
 
       <div class="sideBar-Links">
-      <a href="../Index.html" class="nav-link">home</a>
+      <a href="./Index.html" class="nav-link">home</a>
       
-      <a href="../About_page.html" class="nav-link">about</a>
+      <a href="./About_page.html" class="nav-link">about</a>
       
-      <a href="../Contact_page.html" class="nav-link">contact</a>
+      <a href="./Contact_page.html" class="nav-link">contact</a>
       </div>
       
       <!-- Icons -->
