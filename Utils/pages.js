@@ -2,17 +2,16 @@ import { navBar } from "./navBar.js";
 
 // footer
 import {thisYear} from './footer.js';
-
 import {reseter} from './deleters.js'
 import { get } from "./getElement.js";
 import { sideBar, sideBarClosing } from "./sideBar.js";
 
 
 window.addEventListener('DOMContentLoaded', ()=>{
-    navBar();
-    thisYear();
+  navBar();
+  thisYear();
 
-    // sideBar
+  // sideBar
   sideBar();
   sideBarClosing();
 })

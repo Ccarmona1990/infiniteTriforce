@@ -134,6 +134,10 @@ My Hero
 ================
 */
 
+header {
+  height: 5.68rem;
+}
+
 /*
 ================
 Navbar
@@ -183,16 +187,6 @@ Navbar
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-/*nav-footer*/
-
-.nav-footer {
-  display: flex;
-  justify-content: flex-end;
-  border-radius: var(--borderRadious);
-  border: 5px 0 solid white;
-  transition: var(--transition);
 }
 
 #searchbar {
@@ -796,7 +790,7 @@ Media query
 
   main {
     margin: 0;
-    min-height: calc(100vh - (64px + 91px));
+    min-height: calc(100vh - (4rem + 5.68rem));
   }
 
   .zelda_games {

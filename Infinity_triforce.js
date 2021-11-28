@@ -43,14 +43,6 @@ function reseter (element) {
   element.value ='';
 }
 
-/* ---- Variables ---- */
-
-const welcomeImg = get('.welcomeImage');
-const modal = get('.modal');
-const btnsZIO = [modal, welcomeImg];
-
-
-
 /* ---- global href layout ----*/
 window.addEventListener("DOMContentLoaded", async function () {
   // navBar
@@ -67,8 +59,8 @@ window.addEventListener("DOMContentLoaded", async function () {
   sideBarClosing();
 
   // preFooter and footer
-  preFooter(get);
-  newsletterForm(get,reseter);
+  preFooter();
+  newsletterForm();
   thisYear();
 })
 
