@@ -8,9 +8,6 @@ Modules
 // Zelda games info
 import {zeldagames} from './Utils/zelda_games-info.js';
 
-// Getting elements
-import {get} from './Utils/getElement.js';
-
 // navbar
 import {navBar} from './Utils/navBar.js';
 
@@ -35,13 +32,6 @@ import {search} from './Utils/searchbox.js'
 import './Utils/scroll.js';
 
 
-
-/* ---- Functions ---- */
-
-// reseter
-function reseter (element) {
-  element.value ='';
-}
 
 /* ---- global href layout ----*/
 window.addEventListener("DOMContentLoaded", async function () {
