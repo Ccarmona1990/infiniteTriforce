@@ -8,9 +8,6 @@ Modules
 // Zelda games info
 import {zeldagames} from './Utils/zelda_games-info.js';
 
-// Getting elements
-import {get} from './Utils/getElement.js';
-
 // navbar
 import {navBar} from './Utils/navBar.js';
 
@@ -36,21 +33,6 @@ import './Utils/scroll.js';
 
 
 
-/* ---- Functions ---- */
-
-// reseter
-function reseter (element) {
-  element.value ='';
-}
-
-/* ---- Variables ---- */
-
-const welcomeImg = get('.welcomeImage');
-const modal = get('.modal');
-const btnsZIO = [modal, welcomeImg];
-
-
-
 /* ---- global href layout ----*/
 window.addEventListener("DOMContentLoaded", async function () {
   // navBar
@@ -67,8 +49,8 @@ window.addEventListener("DOMContentLoaded", async function () {
   sideBarClosing();
 
   // preFooter and footer
-  preFooter(get);
-  newsletterForm(get,reseter);
+  preFooter();
+  newsletterForm();
   thisYear();
 })
 

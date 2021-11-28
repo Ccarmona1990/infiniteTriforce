@@ -2,7 +2,6 @@ import {get} from './getElement.js'
 
 // Zelda games added dynamically
 function displayZeldaGames(arr) {
-  //console.log(arr);
   const zeldaGames = get('.zelda_games');
   
   let displayGames = arr.map(({id, name, image})=>{

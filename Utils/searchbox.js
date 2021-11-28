@@ -15,7 +15,6 @@ export function search (arr){
         return zGame
       }
     })
-    //console.log(filteredData);
     displayZeldaGames(filteredData)
   })
 }
