@@ -15,11 +15,10 @@ export function preFooter() {
             name="_replyto" itemid="email"
             type="email" class="newsLetter email" placeholder="abc@email.com" 
             id="newsLetterEmail"
-            required>
+            required/>
             
               <button class="newsLetter aside-btn">
                 <i class="fas fa-paper-plane"></i>
-              
             </button>
             </form> </div><br>
   `)

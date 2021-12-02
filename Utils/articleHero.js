@@ -8,12 +8,12 @@ export function main(){
   </section> <br>
 
   <section class='searchSection'>
-  <div id="searchbar">
+  <form id="searchbar">
           <input type="text" name="" placeholder="search.." id="searchBox" />
           <button type="button" id="searchIcon">
           <i class="fas fa-search"></i>
             </button>
-            </div>
+            </form>
   </section> <br>
 
    <article class="articleHero">
