@@ -274,13 +274,13 @@ main
 
 main {
   padding: 2vh auto;
+  margin: 0 5vw;
   min-height: calc(100vh - (64px + 83px));
   overflow: auto;
   display: grid;
   grid-template-columns: auto;
   align-items: center;
   text-align: center;
-  justify-content: center;
 }
 
 .welcomeSection {
@@ -306,7 +306,6 @@ main {
 article {
   margin: 1vh 2vw;
   margin-bottom: 5rem;
-  max-width: 89vw;
 }
 
 .underline {
@@ -499,7 +498,6 @@ Each Zelda game
   margin-top: 3rem;
   background-color: var(--clr-primary-5);
   border-radius: 0.5rem;
-  padding: 10px;
   box-shadow: var(--darker-shadow);
 }
 
@@ -507,23 +505,29 @@ Each Zelda game
   display: grid;
   grid-template-columns: 50% auto;
   gap: 3vw;
-  margin-bottom: 20px;
 }
 
 .singleGameInfo img {
-  max-width: 45vw;
+  max-width: 100%;
   max-height: auto;
   margin: 0;
   display: inline-block;
   border-radius: var(--borderRadious);
+  width: fit-content;
 }
 
 .description {
   padding-top: 4rem;
+  width: 100%;
+}
+
+.description h1{
+  margin: 0 15px;
 }
 
 .descriptionText {
   text-align: left;
+  margin: 0 15px;
 }
 
 .divider {
@@ -533,7 +537,7 @@ Each Zelda game
 
 .extra {
   padding: 0 10px;
-  margin: 2rem 0;
+  margin: 2rem 0px 2rem 0px;
 }
 
 .extra ul li {
@@ -809,22 +813,6 @@ Media query
     max-width: 35vw;
     max-height: 30vh;
   }
-
-  .singleGameInfo {
-    margin: 15vh 3vw;
-    display: grid;
-    grid-template-columns: 1fr;
-    place-items: center;
-    gap: 3vw;
-  }
-
-  .singleGameInfo img {
-    max-width: 85vw;
-    max-height: 75vh;
-    margin: 0;
-    display: inline-block;
-    border-radius: var(--borderRadious);
-  }
 }
 
 @media screen and (max-width: 990px) {
@@ -858,7 +846,33 @@ Media query
   }
 }
 
-* {
-  margin: 0;
-  padding: 0;
+@media (min-width: 840px){
+  main{
+    margin: 0px 5vw;
+  }
+}
+
+@media (max-width: 840px){
+  .singleGameInfo {
+    margin: 15vh 3vw;
+    display: grid;
+    grid-template-columns: auto;
+    place-items: center;
+    gap: 3vw;
+  }
+
+  .singleGameInfo img {
+    max-width: 85vw;
+    max-height: 75vh;
+    margin: 0;
+    display: inline-block;
+    border-radius: var(--borderRadious);
+  }
+}
+
+
+@media (min-width: 445px){
+  .extra {
+  width: 445px;
+}
 }

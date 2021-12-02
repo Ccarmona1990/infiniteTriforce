@@ -61,7 +61,7 @@ const extra = get('.extra');
 const extraH1 = extra.children[0];
 extraH1.style.fontSize = '35px';
 extraH1.style.textTransform = 'uppercase';
-extraH1.style.width = '30vw'
+extraH1.style.width = 'auto'
 
 // Text modifications 
 const extraUl = extra.children[2];
@@ -70,9 +70,8 @@ for (let i= 0; i < 3; i++){
     extraUl.children[i].style.color= 'white';
     extraUl.children[i].style.backgroundColor = 'purple';
     extraUl.children[i].style.border = '2px solid black';
-    extraUl.children[i].style.maxWidth = '30vw';
+    extraUl.children[i].style.width = 'auto';
     extraUl.children[i].style.fontSize = '25px';
-
 }
 }
 
