@@ -5,7 +5,7 @@ export function main(){
     main.innerHTML = `
   <section>
   <h1 class="articleHeader">Zelda Games</h1> <div class="underline"></div>
-  </section>
+  </section> <br>
 
   <section class='searchSection'>
   <div id="searchbar">
@@ -14,7 +14,7 @@ export function main(){
           <i class="fas fa-search"></i>
             </button>
             </div>
-  </section> <br><br>
+  </section> <br>
 
    <article class="articleHero">
       <div class="zelda_games"></div>
