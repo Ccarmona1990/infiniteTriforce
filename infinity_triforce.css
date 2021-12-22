@@ -297,7 +297,7 @@ main {
 }
 
 .welcomeHeader {
- margin-top: 10vw;
+  margin-top: 10vw;
 }
 
 .welcomeText {
@@ -448,7 +448,7 @@ aside a i.fab:hover {
   height: 3rem;
 }
 
-.email{
+.email {
   outline: none;
   text-indent: 5px;
 }
@@ -462,11 +462,9 @@ aside a i.fab:hover {
   right: 0;
 }
 
-.newsletterForm{
+.newsletterForm {
   position: relative;
 }
-
-
 
 .newsLetterSection {
   color: white;
@@ -531,7 +529,7 @@ Each Zelda game
   width: 100%;
 }
 
-.description h1{
+.description h1 {
   margin: 0 15px;
 }
 
@@ -800,6 +798,7 @@ Media query
     width: 25px;
     background-color: #00000000;
     border: 0px #00000000;
+    cursor: pointer;
   }
 
   main {
@@ -856,13 +855,13 @@ Media query
   }
 }
 
-@media (min-width: 840px){
-  main{
+@media (min-width: 840px) {
+  main {
     margin: 0px 5vw;
   }
 }
 
-@media (max-width: 840px){
+@media (max-width: 840px) {
   .singleGameInfo {
     margin: 15vh 3vw;
     display: grid;
@@ -880,9 +879,8 @@ Media query
   }
 }
 
-
-@media (min-width: 445px){
+@media (min-width: 445px) {
   .extra {
-  width: 445px;
-}
+    width: 445px;
+  }
 }
