@@ -62,7 +62,7 @@ export function navBar() {
           </div>
           </div>              
               </div>
-              `;
+  `;
   
   nav.innerHTML = navh;
   

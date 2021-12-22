@@ -5,9 +5,6 @@ Modules
 ============
 */
 
-// Zelda games info
-import {zeldagames} from './Utils/zelda_games-info.js';
-
 // navbar
 import {navBar} from './Utils/navBar.js';
 
@@ -15,7 +12,7 @@ import {navBar} from './Utils/navBar.js';
 import {preFooter, newsletterForm} from './Utils/preFooter.js';
 
 // footer
-import {thisYear} from './Utils/footer.js';
+import {footer} from './Utils/footer.js';
 
 // sidebar
 import {sideBar, sideBarClosing} from './Utils/sideBar.js';
@@ -55,6 +52,6 @@ window.addEventListener("DOMContentLoaded", async function () {
   // preFooter and footer
   preFooter();
   newsletterForm();
-  thisYear();
+  footer();
 })
 

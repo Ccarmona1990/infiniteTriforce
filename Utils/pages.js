@@ -1,11 +1,11 @@
 import { navBar } from "./navBar.js";
 import { sideBar, sideBarClosing } from "./sideBar.js";
 import {contactForm} from './contactForm.js'
-import {thisYear} from './footer.js';
+import {footer} from './footer.js';
 
 window.addEventListener('DOMContentLoaded', ()=>{
   navBar();
-  thisYear();
+  footer();
   
   // sideBar
   sideBar();

@@ -14,7 +14,7 @@ import {get} from './Utils/getElement.js';
 import {navBar} from './Utils/navBar.js';
 
 // footer
-import {thisYear} from './Utils/footer.js';
+import {footer} from './Utils/footer.js';
 
 // sidebar
 import {sideBar, sideBarClosing} from './Utils/sideBar.js';
@@ -49,7 +49,7 @@ window.addEventListener("DOMContentLoaded", async function () {
   sideBar();
   sideBarClosing();
   // preFooter and footer
-  thisYear();
+  footer();
 }) 
 
 /*
