@@ -156,7 +156,13 @@ Navbar
 }
 
 #navbar {
-  margin: 0 5vw;
+  padding: 0 5vw;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    10deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(208, 139, 255, 0.28084737312893904) 100%
+  );
 }
 
 /* nav-header */
@@ -669,7 +675,7 @@ Media query
 
 @media (max-width: 1195px) {
   #navbar {
-    margin: 0 5vw;
+    padding: 0 5vw;
   }
   #nav-header {
     display: grid;
@@ -808,7 +814,7 @@ Media query
 
   .zelda_games {
     display: grid;
-    gap: 2vw;
+    gap: 3vw;
     grid-template-columns: auto auto;
     box-sizing: border-box;
     margin: 0 auto;
@@ -839,7 +845,7 @@ Media query
 @media (max-width: 900px) {
   .zelda_games {
     display: grid;
-    gap: 2vw;
+    gap: 5vw;
     grid-template-columns: auto;
     box-sizing: border-box;
     margin: 0 auto;
