@@ -22,12 +22,15 @@ import {sideBar, sideBarClosing} from './Utils/sideBar.js';
 
 import {displaySingleGame, displayExtra} from './Utils/displaySingleGame.js'
 
+import {getAsyncData} from './Utils/getData.js'
+
 /*
 ============
 Global
 ============
 */
 const id = localStorage.getItem('game');
+const url = 'https://zeldagames-api.herokuapp.com/'
 
 /* ---- global href layout ----*/
 window.addEventListener("DOMContentLoaded", async function () {
@@ -35,7 +38,9 @@ window.addEventListener("DOMContentLoaded", async function () {
   navBar();
   
   // Article
-  displaySingleGame(zeldagames, id)
+  await getAsyncData(url, (data)=>{
+    displaySingleGame(data,id)
+  });
 
   displayExtra()
   resources();
@@ -45,7 +50,7 @@ window.addEventListener("DOMContentLoaded", async function () {
   sideBarClosing();
   // preFooter and footer
   thisYear();
-})
+}) 
 
 /*
 ============

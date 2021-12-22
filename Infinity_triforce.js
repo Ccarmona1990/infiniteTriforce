@@ -31,18 +31,22 @@ import {search} from './Utils/searchbox.js'
 
 import './Utils/scroll.js';
 
+import {getAsyncData} from './Utils/getData.js'
 
+const url = 'https://zeldagames-api.herokuapp.com/'
 
 /* ---- global href layout ----*/
 window.addEventListener("DOMContentLoaded", async function () {
   // navBar
   navBar();
-
+  
   // Article
   main()
-  displayZeldaGames(zeldagames)
+  await getAsyncData(url, (data)=>{
+    displayZeldaGames(data)
+    search(data)
+  });
   setGame()
-  search(zeldagames)
   
   // sideBar
   sideBar();
@@ -54,17 +58,3 @@ window.addEventListener("DOMContentLoaded", async function () {
   thisYear();
 })
 
-
-
-
-
-
-
-
-
-
-// Things to do here
-/*
--Make all my bottons work properly: still missing the search bar
--remove the tag text from all zelda games
-*/

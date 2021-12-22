@@ -4,11 +4,12 @@ import {get} from './getElement.js'
 function displayZeldaGames(arr) {
   const zeldaGames = get('.zelda_games');
   
-  let displayGames = arr.map(({id, name, image})=>{
+  let displayGames = arr.map(({id, game, image})=>{
+    //console.log(image);
     return `
   <a data-id='${id}' class="zelda_game" 
   href="./SingleGame.html">
-  <h2 >${name} </h2>
+  <h2 >${game} </h2>
             
   <img class="gameImg" 
     src="${image}"
