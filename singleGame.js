@@ -4,8 +4,8 @@ Modules
 ============
 */
 
-// Zelda games info
-import {zeldagames} from './Utils/zelda_games-info.js';
+// Zelda Games API
+import {zeldagamesAPI_url} from './Utils/ZeldaGamesAPI.js'
 
 //Getting elements
 import {get} from './Utils/getElement.js';
@@ -30,7 +30,6 @@ Global
 ============
 */
 const id = localStorage.getItem('game');
-const url = 'https://zeldagames-api.herokuapp.com/'
 
 /* ---- global href layout ----*/
 window.addEventListener("DOMContentLoaded", async function () {
@@ -38,7 +37,7 @@ window.addEventListener("DOMContentLoaded", async function () {
   navBar();
   
   // Article
-  await getAsyncData(url, (data)=>{
+  await getAsyncData(zeldagamesAPI_url, (data)=>{
     displaySingleGame(data,id)
   });
 

@@ -30,7 +30,7 @@ import './Utils/scroll.js';
 
 import {getAsyncData} from './Utils/getData.js'
 
-const url = 'https://zeldagames-api.herokuapp.com/'
+import {zeldagamesAPI_url} from './Utils/ZeldaGamesAPI.js'
 
 /* ---- global href layout ----*/
 window.addEventListener("DOMContentLoaded", async function () {
@@ -39,7 +39,7 @@ window.addEventListener("DOMContentLoaded", async function () {
   
   // Article
   main()
-  await getAsyncData(url, (data)=>{
+  await getAsyncData(zeldagamesAPI_url, (data)=>{
     displayZeldaGames(data)
     search(data)
   });

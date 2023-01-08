@@ -5,7 +5,6 @@ function displayZeldaGames(arr) {
   const zeldaGames = get('.zelda_games');
   
   let displayGames = arr.map(({id, game, image})=>{
-    //console.log(image);
     return `
   <a data-id='${id}' class="zelda_game" 
   href="./SingleGame.html">

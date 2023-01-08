@@ -41,15 +41,15 @@ export const displayExtra = ()=>{
     <h2>Resources</h2><br />
     <ul>
     <li>
-    <span>Do you need a guide? Go to</span>
+    <span>Do you need a guide for this game? Go to</span>
                 <a
-                  href="https://www.ign.com/wikis/the-legend-of-zelda/Basics#Enemy_Encounters"
-                  >IGN</a
+                  href="https://www.zeldadungeon.net/"
+                  >zeldadungeon</a
                 >
               </li><br />
               <li>
-                <span>Do you need a play? Go to</span>
-                <a href="https://www.romsgames.net/roms/">Romsgames</a>
+                <span>Do you want to play this game? Go to</span>
+                <a href="https://myemulator.online/tag/zelda">myemulator</a>
               </li>
             </ul>
             
