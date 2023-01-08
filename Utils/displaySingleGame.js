@@ -42,14 +42,15 @@ export const displayExtra = ()=>{
     <ul>
     <li>
     <span>Do you need a guide for this game? Go to</span>
-                <a
-                  href="https://www.zeldadungeon.net/"
-                  >zeldadungeon</a
-                >
+                <a href="https://www.zeldadungeon.net/" target="_blank">
+                  zeldadungeon
+                </a>
               </li><br />
               <li>
                 <span>Do you want to play this game? Go to</span>
-                <a href="https://myemulator.online/tag/zelda">myemulator</a>
+                <a href="https://myemulator.online/tag/zelda" target="_blank">
+                myemulator
+                </a>
               </li>
             </ul>
             
