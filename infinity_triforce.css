@@ -887,6 +887,6 @@ Media query
 
 @media (min-width: 445px) {
   .extra {
-    width: 445px;
+    max-width: 650px;
   }
 }

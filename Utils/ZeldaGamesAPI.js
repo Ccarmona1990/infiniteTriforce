@@ -1,0 +1,1 @@
+export const zeldagamesAPI_url = 'https://zeldagammes-api.onrender.com/zelda_games'
