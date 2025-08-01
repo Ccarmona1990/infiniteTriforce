@@ -6,7 +6,7 @@ import {hideLoading} from './ToggleLoading.js'
 function displayZeldaGames(arr) {
   const zeldaGames = get('.zelda_games');
   
-  // hide the loading spinner before displaying the games
+  // hide the loading spinner when games are fetched
   hideLoading();
   
   let displayGames = arr.map(({id, game, image})=>{
