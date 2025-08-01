@@ -5,8 +5,8 @@ export const footer = ()=>{
   const footer = get('#footer');
   const footerContent = (`
   <p>
-    &copy; <span id="date">${currentYear}</span>
-    <span class="footer-logo">Infinite triforce</span> Built by <a href="https://ccarmona.netlify.app/">Christopher Carmona</a>
+    &copy; <span id="date"> Built in 2021 </span>
+    <span class="footer-logo">Infinite triforce</span> Built by <a href="https://christophercarmona.dev/">Christopher Carmona</a>
   </p>
   `)
   footer.innerHTML = footerContent;

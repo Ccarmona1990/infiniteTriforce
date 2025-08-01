@@ -54,8 +54,6 @@ window.addEventListener("DOMContentLoaded", async function () {
   sideBarClosing();
 
   // preFooter and footer
-  preFooter();
-  newsletterForm();
   footer();
 })
 
