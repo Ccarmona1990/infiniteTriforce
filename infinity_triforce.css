@@ -168,9 +168,11 @@ Navbar
 /* nav-header */
 
 #nav-header {
-  display: grid;
-  grid-template-columns: 15% auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
+  justify-content: space-evenly;
   gap: 35px;
 }
 
@@ -677,11 +679,6 @@ Media query
   #navbar {
     padding: 0 5vw;
   }
-  #nav-header {
-    display: grid;
-    grid-template-columns: 10% auto 5%;
-    align-items: center;
-  }
 
   .nav-footer {
     display: flex;
@@ -762,7 +759,6 @@ Media query
 
   #togglebtn {
     display: block;
-    display: initial;
   }
 
   #togglebtn:hover {
