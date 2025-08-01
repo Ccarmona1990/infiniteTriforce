@@ -16,8 +16,12 @@ export function main(){
             </form>
   </section> <br>
 
-   <article class="articleHero">
+  <section class="loading">
+    <img src="./Images/blob.gif" alt="loader">
+  </section>
+
+  <article class="articleHero">
       <div class="zelda_games"></div>
-   </article>
+  </article>
   `;
 }

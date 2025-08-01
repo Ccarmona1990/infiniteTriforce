@@ -21,7 +21,7 @@ export function navBar() {
           
           <!-- nav-header section -->
           
-          <div class="navHeaderSection">
+          <!-- <div class="navHeaderSection"> -->
           
           <!-- nav-links -->
           
@@ -60,7 +60,9 @@ export function navBar() {
           <i class="fas fa-align-justify fa-2x"></i>
           </button>
           </div>
-          </div>              
+          <!-- </div> -->
+          
+          <a href="https://mylearningprojects.netlify.app/"><i class="fa fa-home fa-2x"></i></a>
               </div>
   `;
   

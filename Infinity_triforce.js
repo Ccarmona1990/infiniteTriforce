@@ -9,7 +9,7 @@ Modules
 import {navBar} from './Utils/navBar.js';
 
 // Pre-footer
-import {preFooter, newsletterForm} from './Utils/preFooter.js';
+/*import {preFooter, newsletterForm} from './Utils/preFooter.js';*/
 
 // footer
 import {footer} from './Utils/footer.js';
@@ -39,10 +39,14 @@ window.addEventListener("DOMContentLoaded", async function () {
   
   // Article
   main()
+
   await getAsyncData(zeldagamesAPI_url, (data)=>{
     displayZeldaGames(data)
     search(data)
   });
+  // setGame
+  // This function is called to set the game based on the URL parameters or default to the first game.
+  // It will also handle the display of the game details and images.
   setGame()
   
   // sideBar

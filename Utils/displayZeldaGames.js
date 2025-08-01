@@ -1,8 +1,13 @@
 import {get} from './getElement.js'
+import {hideLoading} from './ToggleLoading.js'
+
 
 // Zelda games added dynamically
 function displayZeldaGames(arr) {
   const zeldaGames = get('.zelda_games');
+  
+  // hide the loading spinner before displaying the games
+  hideLoading();
   
   let displayGames = arr.map(({id, game, image})=>{
     return `
